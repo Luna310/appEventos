@@ -71,7 +71,8 @@ h3 {
 	display: none;
 }
 
-.eventoExt {
+
+.eventoExtend {
 	height: 100%;
 	width: 100%;
 	color: white;
@@ -81,6 +82,18 @@ h3 {
 	margin-top: 20px;
 	
 }
+
 .descripcion{
 	width: 80%;
+}
+
+.divExtend {
+    margin-top: 15px;
+    font-family: fantasy;
+    font-size: medium;
+	color: white;
+	background-color: red;
+	border-radius: 20px;
+	overflow:scroll;
+	height: 300px;
 }

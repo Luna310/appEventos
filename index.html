@@ -71,7 +71,7 @@
 		<div id="calendario" class="container">
 			<div class="row">
 				<div class="col-xs-6">
-					<a @click="goBack()"><img src="imgEventos/volver3.png"></a>
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo2.png" class="logo img-responsive" alt="logo"></a>
 				</div>
 
 				<div class="col-xs-6">
@@ -102,7 +102,7 @@
 		<div id="deportes" class="container">
 			<div class="row">
 				<div class="col-xs-6">
-					<button @click="goBack()"><img src="imgEventos/volver3.png"></button>
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo2.png" class="logo img-responsive" alt="logo"></a>
 				</div>
 
 				<div class="col-xs-6">
@@ -117,7 +117,7 @@
 			</div>
 
 			<div class="" v-for="evento in eventosD">
-				<button type="button" class="btn btn-success eventoD">
+				<button type="button" class="btn btn-success eventoD" @click="divExtend(evento.nombre,'deportes')">
 					<p>{{evento.fecha}}</p>
 					<h4>{{evento.nombre}}</h4>
 				</button>
@@ -130,7 +130,7 @@
 		<div id="cultura" class="container">
 			<div class="row">
 				<div class="col-xs-6">
-					<button @click="goBack()"><img src="imgEventos/volver3.png"></button>
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo2.png" class="logo img-responsive" alt="logo"></a>
 				</div>
 
 				<div class="col-xs-6">
@@ -145,7 +145,7 @@
 			</div>
 
 			<div class="" v-for="evento in eventosC">
-				<button type="button" class="btn btn-success eventoC">
+				<button type="button" class="btn btn-success eventoC" @click="divExtend(evento.nombre,'cultura')">
 					<p>{{evento.fecha}}</p>
 					<h4>{{evento.nombre}}</h4>
 				</button>
@@ -156,7 +156,7 @@
 		<div id="festivo" class="container">
 			<div class="row">
 				<div class="col-xs-6">
-					<button @click="goBack()"><img src="imgEventos/volver3.png"></button>
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo2.png" class="logo img-responsive" alt="logo"></a>
 				</div>
 
 				<div class="col-xs-6">
@@ -171,7 +171,7 @@
 			</div>
 
 			<div class="" v-for="evento in eventosF">
-				<button type="button" class="btn btn-success eventoF">
+				<button type="button" class="btn btn-success eventoF" @click="divExtend(evento.nombre,'festivo')">
 					<p>{{evento.fecha}}</p>
 					<h4>{{evento.nombre}}</h4>
 				</button>
@@ -184,7 +184,7 @@
 		<div id="eventoExtend" class="container">
 			<div class="row">
 				<div class="col-xs-6">
-					<button @click=""><img src="imgEventos/volver3.png"></button>
+					<a @click="volver()"><img src="imgEventos/volver3.png"></a>
 				</div>
 
 				<div class="col-xs-6">
@@ -193,24 +193,23 @@
 				</div>
 
 			</div>
-			<div class="">
+			<div class="container divExtend">
 
 				<div v-for="evento in eventFilter">
-						<p>Fecha: {{evento.fecha}}</p>
-						<p>Hora: {{evento.hora}}</p>
-						<p>Lugar: {{evento.lugar}}</p>
-						<p>Dirección: {{evento.direccion}}</p>
-						<h4>{{evento.nombre}}</h4>
-						<p>{{evento.descripcion}}</p>
-					</div>
-					<div v-for="evento in eventFilter">
-					<h3>Mapa</h3>
-						{{evento.map}}
-					</div>
+					<p>Fecha: {{evento.fecha}}</p>
+					<p>Hora: {{evento.hora}}</p>
+					<p>Lugar: {{evento.lugar}}</p>
+					<p>Dirección: {{evento.direccion}}</p>
+					<h4>{{evento.nombre}}</h4>
+					<p>{{evento.descripcion}}</p>
+				</div>
+
 			</div>
-
+			<h3>Mapa:</h3>
 		</div>
-
+		<div class="container justify-content-center">
+			<a id="map"></a>
+		</div>
 	</div>
 	<script src="appEventos.js"></script>
 </body>
