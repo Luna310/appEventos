@@ -1,4 +1,9 @@
+body {
+	background-color: #00517e;
+}
+
 .mainDiv {
+	text-align: center;
 	width: 100%;
 	height: 100%;
 	/*
@@ -11,7 +16,7 @@
 .h1Main {
 	font-size: 45px;
 	font-family: fantasy;
-	color: blue;
+	color: yellow;
 }
 
 .btn-success {
@@ -67,11 +72,12 @@ h3 {
 	margin-top: 20px;
 }
 
-.none{
+.none {
 	display: none;
 }
 
 
+/*
 .eventoExtend {
 	height: 100%;
 	width: 100%;
@@ -80,20 +86,41 @@ h3 {
 	border-radius: 20px;
 	text-align: ;
 	margin-top: 20px;
-	
-}
 
-.descripcion{
+}
+*/
+
+.descripcion {
 	width: 80%;
 }
 
 .divExtend {
-    margin-top: 15px;
-    font-family: fantasy;
-    font-size: medium;
-	color: white;
-	background-color: red;
+	margin-top: 15px;
+	font-family: cursive;
+	font-size: medium;
+	color: cornsilk;
+	background-color: black;
 	border-radius: 20px;
-	overflow:scroll;
+	overflow: scroll;
 	height: 300px;
+}
+
+.divExtend,
+p {
+	margin-top: 15px;
+}
+
+.divExtend,
+h3 {
+	font-family: cursive;
+	color: yellow;
+	font-size: 24px;
+}
+
+.divMapa {
+	text-align: center;
+}
+.divExtendH2 {
+    text-align: center;
+    font-size: 30px;
 }

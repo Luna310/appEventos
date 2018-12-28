@@ -75,7 +75,7 @@
 					</a>
 				</div>
 				<div class="col-xs-6">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo2.png" class="logo img-responsive" alt="logo"></a>
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
 				</div>
 
 			</div>
@@ -186,7 +186,7 @@
 				</div>
 
 				<div class="col-xs-6">
-					<a class="" href="index.html"><img class="" src="imgEventos/home2.png" alt="casa">
+					<a class="" href="index.html"><img class="" src="imgEventos/home.png" alt="casa">
 					</a>
 				</div>
 
@@ -194,18 +194,23 @@
 			<div class="container divExtend">
 
 				<div v-for="evento in eventFilter">
-					<p>Fecha: {{evento.fecha}}</p>
-					<p>Hora: {{evento.hora}}</p>
-					<p>Lugar: {{evento.lugar}}</p>
+
+					<h2>Fecha:</h2>
+					<p>{{evento.fecha}}</p>
+					<h2>Hora:</h2>
+					<p>{{evento.hora}}</p>
+					<h2>Lugar:</h2>
+					<p>{{evento.lugar}}</p>
+					<h2>Dirección:</h2>
 					<p>Dirección: {{evento.direccion}}</p>
-					<h4>{{evento.nombre}}</h4>
+					<h2 class="divExtendH2">{{evento.nombre}}</h2>
 					<p>{{evento.descripcion}}</p>
 				</div>
 
 			</div>
 			<h3>Mapa:</h3>
 		</div>
-		<div class="container justify-content-center">
+		<div class="container divMapa">
 			<a id="map"></a>
 		</div>
 	</div>

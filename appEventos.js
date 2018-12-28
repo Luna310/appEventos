@@ -19,7 +19,7 @@ var app = new Vue({
 	},
 	methods: {
 		getData: function () {
-			fetch("https://api.myjson.com/bins/ppkes", {
+			fetch("https://api.myjson.com/bins/g4xrw", {
 				method: "GET",
 
 			}).then(function (response) {
