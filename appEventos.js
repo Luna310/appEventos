@@ -96,6 +96,14 @@ var app = new Vue({
 			this.pHome = p;
 			console.log(p)
 		},
+		changeDiv2: function () {
+
+			x = document.getElementById("mainDiv");
+			x.style.display = "block";
+
+			y = document.getElementById(this.pHome);
+			y.style.display = this.oculto;
+		},
 		/*funcion que mostrará el div con la información completa de cada evento,para ello se rellenará un nuevo array con este evento,para ello la función tiene dos parametros que uno de ellos será el nombre del evento que lo cogerá desde el HTML y de forma dinámica ya que el valor del nombre del evento varía automaticamente.el otro parametro se pondrá dependiendo del div desde el que llamemos al vento ya que ese parametro sera el div que ocultemos para mostrar el nuevo.Por último esta función engresará el mapa por medio de INNERHTML en el div que hemos creado para ello en el HTML,el valor de la variable auxMap sera o que se introduzca de forma dinamica.*/
 		divExtend: function (p, p2) {
 
