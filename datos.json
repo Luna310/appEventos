@@ -7,7 +7,7 @@ var data = {
 
 		"fecha": "Sábado, 15 de diciembre de 2018",
 		
-		"hora":"Hora: 18:00:00",
+		"hora":" 18:00",
 
 		"nombre": "Karate junior",
 
@@ -27,7 +27,7 @@ var data = {
 
 		"fecha": "Domingo, 16 de diciembre de 2018",
 		
-		"hora":"Hora: 16:00:00",
+		"hora":"16:00",
 
 		"nombre": "Futbol Sala senior",
 
@@ -46,7 +46,7 @@ var data = {
 
 		"fecha": "Sábado, 15 de diciembre de 2018",
 		
-		"hora":"Hora: 16:00:00",
+		"hora":"16:00",
 
 		"nombre": "Concierto de Navidad",
 
@@ -63,7 +63,7 @@ var data = {
 
 		"fecha": "sábado 8 de diciembre de 2018",
 		
-		"hora":"Hora: 16:00:00",
+		"hora":"16:00",
 
 		"nombre": "IV Jornada Histórica de Santa Olalla",
 
@@ -83,7 +83,7 @@ var data = {
 
 		"fecha": "Sábado 4 de agosto de 2019.",
 		
-		"hora":"Hora: 16:00:00",
+		"hora":"16:00",
 
 		"nombre": "COLORS PARTY SANTA OLALLA",
 
@@ -103,7 +103,7 @@ var data = {
 
 		"fecha": "Sábado 11 de agosto de 2019.",
 		
-		"hora":"Hora: 20:00:00",
+		"hora":"20:00",
 
 		"nombre": "DISCOTECA MOVILSHOW",
 
