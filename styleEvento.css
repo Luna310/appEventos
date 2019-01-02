@@ -86,13 +86,13 @@ h3 {
 }
 
 .divExtend {
-	box-shadow: 0 0 20px 14px black;
+	box-shadow: 0 0 40px 20px black;
 	margin-top: 15px;
 	font-family: serif;
 	height: 300px;
-	
+	border-radius: 40px;
 	overflow: scroll;
-/*
+	/*
 	background-image: url(imgEventos/perg.jpg);
 	background-repeat: no-repeat;
 	border: 16px solid orange;
@@ -127,9 +127,10 @@ h3 {
 	color: azure;
 }
 
-.divExtend, p {
-    margin-top: 15px;
-    font-size: 18px;
+.divExtend,
+p {
+	margin-top: 15px;
+	font-size: 18px;
 }
 
 h3 {
@@ -139,7 +140,8 @@ h3 {
 .buttonVolver {
 	margin-top: 15px;
 	border-radius: 70px;
-/*	border: 4px solid orange;*/
+	margin-bottom: 15px;
+	/*	border: 4px solid orange;*/
 }
 
 
