@@ -3,7 +3,7 @@
 
 <head>
 	<!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
-
+	<title>Santa Olalla</title>
 	<meta charset="utf-8">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
 		<div id="mainDiv" class="mainDiv center-block container">
 			<div class="class1 row container">
 				<div class="col-xs-2">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
 				</div>
 				<div class="col-xs-9">
 					<h1 class="h1Main">Santa Olalla</h1>
@@ -59,10 +59,27 @@
 				</button>
 			</div>
 
+			<div class="festivos container-fluid">
+				<button type="button" class="btn btn-success" @click="changeDiv('privado')">
+					<h3>EVENTOS PATROCINADOS</h3>
+				</button>
+			</div>
+
 			<div class="chat container-fluid">
 				<button type="button" class="btn btn-success" @click="changeDiv('chat')">
 					<h3>CHAT</h3>
 				</button>
+			</div>
+			<div class="rrss container row">
+				<div class="col-xs-4">
+					<a target="_blank" href="https://es-es.facebook.com/ayuntamientosantaolalla/"><img src="imgEventos/facebook.png" class="logo img-responsive" alt="logo"></a>
+				</div>
+				<div class="col-xs-4">
+					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/web.png" class="logo img-responsive" alt="logo"></a>
+				</div>
+				<div class="col-xs-4">
+					<a target="_blank" href="https://twitter.com/aytostolalla?lang=es"><img src="imgEventos/twitter.png" class="logo img-responsive" alt="logo"></a>
+				</div>
 			</div>
 		</div>
 		<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -70,12 +87,13 @@
 		<!--DIV calendario-->
 		<div id="calendario" class="container">
 			<div class="row">
-				<div class="col-xs-6">
+
+				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
 				</div>
-				<div class="col-xs-6">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
+				<div class="col-xs-5">
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
 				</div>
 
 			</div>
@@ -100,12 +118,13 @@
 
 		<div id="deportes" class="container">
 			<div class="row">
-				<div class="col-xs-6">
+
+				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
 				</div>
-				<div class="col-xs-6">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
+				<div class="col-xs-5">
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
 				</div>
 
 			</div>
@@ -128,14 +147,13 @@
 		<div id="cultura" class="container">
 			<div class="row">
 
-				<div class="col-xs-6">
+				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
 				</div>
-				<div class="col-xs-6">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
+				<div class="col-xs-5">
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
 				</div>
-
 
 			</div>
 
@@ -154,12 +172,13 @@
 		<!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 		<div id="festivo" class="container">
 			<div class="row">
-				<div class="col-xs-6">
+			
+				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
 				</div>
-				<div class="col-xs-6">
-					<a target="_blank" href="http://www.santaolalla.es/index.php"><img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo"></a>
+				<div class="col-xs-5">
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
 				</div>
 
 			</div>
@@ -175,6 +194,33 @@
 				</button>
 
 			</div>
+		</div>
+
+		<div id="privado" class="container">
+			<div class="row">
+			
+				<div class="col-xs-7">
+					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
+					</button>
+				</div>
+				<div class="col-xs-5">
+					<img src="imgEventos/escudo3.png" class="logo img-responsive" alt="logo">
+				</div>
+
+			</div>
+
+			<div class="h1Main">
+				<h2>EVENTOS ESPECIALES</h2>
+			</div>
+
+			<div class="" v-for="evento in eventosP">
+				<button type="button" class="btn btn-success eventoD" @click="divExtend(evento.nombre,'privado')">
+					<p>{{evento.fecha}}</p>
+					<h4>{{evento.nombre}}</h4>
+				</button>
+
+			</div>
+
 		</div>
 
 		<!--///////////////////////////////////////////////////////////////////////////////////////////-->

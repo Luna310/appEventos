@@ -115,7 +115,27 @@ var data = {
 
 		"map":" <iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6110.582777270679!2d-4.438290775952685!3d40.024273250540055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf18050c09ed1be5f!2sPiscinas+municipales!5e0!3m2!1ses!2ses!4v1545996040637' width='auto' height='200' frameborder='1' style='border:1' allowfullscreen></iframe>"
 
+	},
+	
+	{
+		"id": "privado",
+
+		"fecha": "Lunaes 31 de diciembre de 2018.",
+		
+		"hora":"18:00",
+
+		"nombre": "FIESTA FIN DE AÑO BAR DON PANCHO",
+
+		"descripcion": "Gran fiesta fin de año amenizada por el saxofonista profesional y showman Miguel Gutierrez.Os espermos a partir de las 18:00 con un buen ambiente navideño y el mejor servicio de la comarca.",
+
+		"lugar": "Bar Don Pancho",
+
+		"direccion": "Calle Mayor, 25, 45530 Santa Olalla, Toledo",
+
+		"map":"<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.297871614977!2d-4.433827985118372!3d40.024128487347554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd402d039a8098f7%3A0x43e2b642a376aeee!2sDon+Pancho!5e0!3m2!1ses!2ses!4v1546807906221' width='auto' height='200' frameborder='1' style='border:1' allowfullscreen></iframe>"
+
 	}
+	
 
 			
 ]

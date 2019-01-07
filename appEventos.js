@@ -6,6 +6,7 @@ var app = new Vue({
 		eventosD: [],
 		eventosF: [],
 		eventosC: [],
+		eventosP: [],
 		eventFilter: [],
 		oculto: "none",
 		auxMap: "",
@@ -20,7 +21,7 @@ var app = new Vue({
 	},
 	methods: {
 		getData: function () {
-			fetch("https://api.myjson.com/bins/nqa1w", {
+			fetch("https://api.myjson.com/bins/q8dyg", {
 				method: "GET",
 
 			}).then(function (response) {
@@ -61,6 +62,10 @@ var app = new Vue({
 					this.eventosF.push(app.eventos[i]);
 				}
 
+				if (app.eventos[i].id == "privado") {
+					this.eventosP.push(app.eventos[i]);
+				}
+
 			}
 			console.log(this.eventosD);
 			console.log(this.eventosC);
@@ -81,6 +86,9 @@ var app = new Vue({
 
 			l = document.getElementById("festivo");
 			l.style.display = this.oculto;
+
+			j = document.getElementById("privado");
+			j.style.display = this.oculto;
 
 			n = document.getElementById("eventoExtend");
 			n.style.display = this.oculto;
