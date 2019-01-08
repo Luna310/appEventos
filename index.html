@@ -2,11 +2,29 @@
 <html lang="en">
 
 <head>
-	<!--<script src="https://www.w3schools.com/lib/w3.js"></script>-->
-	<title>Santa Olalla</title>
 	<meta charset="utf-8">
+	<title>Santa Olalla</title>
+
+	<!--etiqueta met para impletar app de escritorio apple y las mediaqery-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="imgEventos/escudo.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="imgEventos/escudo.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="imgEventos/escudo.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="imgEventos/escudo.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="imgEventos/escudo.png">
+
+	<!--Link para mostrar imagen de inicio mientras carga la app-->
+	<link rel="apple-touch-startup-image" href="imgEventos/escudo.png">
+
+	<!--Meta para que salga el nombre de la app y dejar tittle para SEO-->
+	
+	<meta name="apple-mobile-web-app-title" content="APP de George">
+
+	<!--Meta para mostrar la app como independiente y ue no salga la barra de navegador-->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<!-- jQuery library -->
@@ -172,7 +190,7 @@
 		<!--////////////////////////////////////////////////////////////////////////////////////////////////-->
 		<div id="festivo" class="container">
 			<div class="row">
-			
+
 				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
@@ -198,7 +216,7 @@
 
 		<div id="privado" class="container">
 			<div class="row">
-			
+
 				<div class="col-xs-7">
 					<button class="buttonVolver" @click="changeDiv2()"><img class="" src="imgEventos/volver3.png">
 					</button>
@@ -237,9 +255,9 @@
 				</div>
 
 			</div>
-			<div class="container divExtend">
+			<div v-for="evento in eventFilter">
 
-				<div v-for="evento in eventFilter">
+				<div class="container divExtend">
 					<h2 class="divExtendH2">{{evento.nombre}}</h2>
 					<h2>Fecha:</h2>
 					<p>{{evento.fecha}}</p>
@@ -251,10 +269,12 @@
 					<h2>Dirección:</h2>
 					<p>{{evento.direccion}}</p>
 					<p>{{evento.descripcion}}</p>
+
 				</div>
+				<h3>Mapa:</h3>
 
 			</div>
-			<h3>Mapa:</h3>
+
 		</div>
 		<div class="container divMapa">
 			<a id="map"></a>
