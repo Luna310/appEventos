@@ -22,6 +22,17 @@ body {
 }
 
 .btn-success {
+
+	width: 100%;
+	color: yellow;
+	background-color: blue;
+	border: yellow 5px solid;
+	border-radius: 20px;
+	margin-top: 15px;
+}
+
+.btn-success2 {
+	height: 55px;
 	width: 100%;
 	color: yellow;
 	background-color: blue;
@@ -32,6 +43,11 @@ body {
 
 h3 {
 	font-size: 20px;
+}
+
+.divExtend,
+h3 {
+	margin-top: 7px;
 }
 
 .class1 {
@@ -151,7 +167,8 @@ h3 {
 	border-image-source: url(imgEventos/border.png);
 	border-image-slice: 30;
 }
-.rrss{
-	
-    text-align: -webkit-center;
+
+.rrss {
+
+	text-align: -webkit-center;
 }
