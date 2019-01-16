@@ -60,37 +60,37 @@
 			</div>
 			<div class="divButton">
 				<div class="calendario container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('calendario')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('calendario','mainDiv')">
 						<h3>CALENDARIO EVENTOS</h3>
 					</button>
 				</div>
 
 				<div class="deportivo container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('deportes')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('deportes','mainDiv')">
 						<h3>EVENTOS DEPORTIVOS</h3>
 					</button>
 				</div>
 
 				<div class="cultural container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('cultura')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('cultura','mainDiv')">
 						<h3>EVENTOS CULTURALES</h3>
 					</button>
 				</div>
 
 				<div class="festivos container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('festivo')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('festivo','mainDiv')">
 						<h3>EVENTOS FESTIVOS</h3>
 					</button>
 				</div>
 
 				<div class="festivos container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('privado')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('privado','mainDiv')">
 						<h3>EVENTOS PATROCINADOS</h3>
 					</button>
 				</div>
 
 				<div class="chat container-fluid">
-					<button type="button" class="btn btn-success2" @click="changeDiv('chat')">
+					<button type="button" class="btn btn-success2" @click="changeDiv('chat','mainDiv')">
 						<h3>CHAT</h3>
 					</button>
 				</div>
@@ -114,7 +114,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','calendario')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -127,12 +127,12 @@
 				<h2>CALENDARIO</h2>
 			</div>
 			<div class="divButton">
-				<div class="" v-for="evento in eventos">
+				<div class="" v-for="event in events">
 					<div>
-						<button type="button" class="btn btn-success evento" @click="divExtend(evento.nombre,'calendario')">
+						<button type="button" class="btn btn-success evento" @click="divExtend(event.nombre,'calendario')">
 
-							<p>{{evento.fecha}}</p>
-							<h4>{{evento.nombre}}</h4>
+							<p>{{event.fecha}}</p>
+							<h4>{{event.nombre}}</h4>
 
 						</button>
 					</div>
@@ -145,7 +145,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','deportes')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -158,10 +158,10 @@
 				<h2>DEPORTES</h2>
 			</div>
 			<div class="divButton">
-				<div class="" v-for="evento in eventosD">
-					<button type="button" class="btn btn-success eventoD" @click="divExtend(evento.nombre,'deportes')">
-						<p>{{evento.fecha}}</p>
-						<h4>{{evento.nombre}}</h4>
+				<div class="" v-for="event in eventsD">
+					<button type="button" class="btn btn-success eventoD" @click="divExtend(event.nombre,'deportes')">
+						<p>{{event.fecha}}</p>
+						<h4>{{event.nombre}}</h4>
 					</button>
 				</div>
 			</div>
@@ -172,7 +172,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','cultura')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -185,10 +185,10 @@
 				<h2>CULTURA</h2>
 			</div>
 			<div class="divButton">
-				<div class="" v-for="evento in eventosC">
-					<button type="button" class="btn btn-success eventoC" @click="divExtend(evento.nombre,'cultura')">
-						<p>{{evento.fecha}}</p>
-						<h4>{{evento.nombre}}</h4>
+				<div class="" v-for="event in eventsC">
+					<button type="button" class="btn btn-success eventoC" @click="divExtend(event.nombre,'cultura')">
+						<p>{{event.fecha}}</p>
+						<h4>{{event.nombre}}</h4>
 					</button>
 				</div>
 			</div>
@@ -198,7 +198,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','festivo')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -211,10 +211,10 @@
 				<h2>FIESTAS</h2>
 			</div>
 			<div class="divButton">
-				<div class="" v-for="evento in eventosF">
-					<button type="button" class="btn btn-success eventoF" @click="divExtend(evento.nombre,'festivo')">
-						<p>{{evento.fecha}}</p>
-						<h4>{{evento.nombre}}</h4>
+				<div class="" v-for="event in eventsF">
+					<button type="button" class="btn btn-success eventoF" @click="divExtend(event.nombre,'festivo')">
+						<p>{{event.fecha}}</p>
+						<h4>{{event.nombre}}</h4>
 					</button>
 				</div>
 			</div>
@@ -224,7 +224,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','privado')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -237,10 +237,10 @@
 				<h2>EVENTOS ESPECIALES</h2>
 			</div>
 			<div class="divButton">
-				<div class="" v-for="evento in eventosP">
-					<button type="button" class="btn btn-success eventoD" @click="divExtend(evento.nombre,'privado')">
-						<p>{{evento.fecha}}</p>
-						<h4 class="h4extend">{{evento.nombre}}</h4>
+				<div class="" v-for="event in eventsP">
+					<button type="button" class="btn btn-success eventoD" @click="divExtend(event.nombre,'privado')">
+						<p>{{event.fecha}}</p>
+						<h4 class="h4extend">{{event.nombre}}</h4>
 					</button>
 				</div>
 			</div>
@@ -252,7 +252,7 @@
 			<div class="row">
 
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="changeDiv2()"><img class="imgVolver" src="imgEventos/volver3.png">
+					<button class="buttonVolver" @click="changeDiv('mainDiv','chat')"><img class="imgVolver" src="imgEventos/volver3.png">
 					</button>
 				</div>
 				<div class="col-xs-3">
@@ -273,7 +273,7 @@
 			</div>
 			<div id="bodyChat" class="container">
 				<div id="divMensajes" class="divMensajes">
-				
+
 				</div>
 				<div class="row divMensajeBotones">
 					<div class="col-xs-9">
@@ -292,41 +292,40 @@
 		</div>
 		<!--//////////////////////////////////////////////////////////////////////////////////////////////////-->
 
-		<div id="eventoExtend" class="container">
+		<div id="eventExtend" class="container">
 			<div class="row">
 				<div class="col-xs-8">
-					<button class="buttonVolver" @click="volver()"><img class="imgVolver" src="imgEventos/volver3.png"></button>
+					<button class="buttonVolver" @click="changeDiv(varBack,'eventExtend')"><img class="imgVolver" src="imgEventos/volver3.png"></button>
 				</div>
 
 				<div class="col-xs-4">
-					<button class="buttonVolver " @click="toHome()"><img class="imgHome" src="imgEventos/home.png" alt="casa">
+					<button class="buttonVolver " @click="changeDiv('mainDiv','eventExtend')"><img class="imgHome" src="imgEventos/home.png" alt="casa">
 					</button>
 				</div>
 
 			</div>
-			<div v-for="evento in eventFilter">
+			<div v-for="event in eventFilter">
 
 				<div class="container divExtend">
-					<h2 class="divExtendH2">{{evento.nombre}}</h2>
+					<h2 class="divExtendH2">{{event.nombre}}</h2>
 					<h2>Fecha:</h2>
-					<p class="pExtend">{{evento.fecha}}</p>
-					<h2>Hora:<p>{{evento.hora}}</p>
+					<p class="pExtend">{{event.fecha}}</p>
+					<h2>Hora:<p>{{event.hora}}</p>
 					</h2>
 
 					<h2>Lugar:</h2>
-					<p class="pExtend">{{evento.lugar}}.</p>
+					<p class="pExtend">{{event.lugar}}.</p>
 					<h2>Dirección:</h2>
-					<p class="pExtend">{{evento.direccion}}</p>
-					<p class="pExtend">{{evento.descripcion}}</p>
+					<p class="pExtend">{{event.direccion}}</p>
+					<p class="pExtend">{{event.descripcion}}</p>
 
 				</div>
 				<h3 class="h3Mapa">Mapa:</h3>
-
+				<div>
+					<iframe :src="event.map"></iframe>
+				</div>
 			</div>
 
-		</div>
-		<div class="container divMapa">
-			<a class="mapa" id="map"></a>
 		</div>
 	</div>
 
